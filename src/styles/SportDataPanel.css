@@ -2,34 +2,37 @@
 .sport-data-panel {
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
+  min-width: 320px;
   width: 600px;
-  min-width: 600px;
-  max-width: 380px;
-  min-height: 100%;
-  padding: 48px;
+  max-width: 600px;
+  height: 100%;
+  padding: 2rem;
   gap: 16px;
   background: rgba(15, 18, 28, 0.5);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 0 20px 20px 0;
   border-left: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
-  overflow-y: auto;
   z-index: 5;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .data-panel-section {
   /* background: rgba(15, 18, 28, 0.75); */
   font-family: "Inter";
+  flex: 1;
   backdrop-filter: blur(20px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 28px;
+  padding: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
 }
 
 .data-panel-section:last-child {

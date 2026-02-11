@@ -10,6 +10,23 @@ import "../styles/Examples.css";
 function Examples() {
   const [activeSport, setActiveSport] = useState("football");
 
+  function setupAllDynamicZooms() {
+    document.querySelectorAll(".sport-data-panel").forEach((parent) => {
+      const content = parent.querySelector(".data-panel-section");
+      const baseWidth = parseFloat(getComputedStyle(content).width); // автоопределение
+
+      const resizeObserver = new ResizeObserver((entries) => {
+        const parentWidth = entries[0].contentRect.width;
+        const zoomValue = Math.min(1, (parentWidth / baseWidth) * 0.95); // 95% для отступов
+        content.style.zoom = zoomValue;
+      });
+
+      resizeObserver.observe(parent);
+    });
+  }
+
+  setupAllDynamicZooms();
+
   const sports = [
     { id: "football", name: "Футбол", image: footballImage },
     { id: "hockey", name: "Хоккей", image: hockeyImage },

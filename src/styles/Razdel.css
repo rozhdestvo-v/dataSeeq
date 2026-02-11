@@ -1,8 +1,8 @@
 .razdel {
   width: 100%;
-  height: 100vh;
-  padding: 96px 18px 0px;
-  margin-bottom: 96px;
+  min-height: 100vh;
+  padding: 18px;
+  margin-bottom: 6rem;
   overflow: visible;
 }
 
@@ -18,11 +18,10 @@
   overflow: visible;
 }
 
-@media (min-width: 426px) {
   .razdel-desktop {
     display: block;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 0px 12px;
   }
 
@@ -109,7 +108,6 @@
     width: 50%;
     height: 50%;
   }
-}
 
 @media (max-width: 1440px) and (min-width: 1025px) {
   .razdel-title {
@@ -143,7 +141,7 @@
 
 @media (max-width: 544px) {
   .razdel {
-    height: auto;
+    min-height: auto;
     width: 100vw;
     overflow: hidden;
     position: relative;
@@ -191,10 +189,10 @@
   .razdel-right {
     position: absolute;
     opacity: 0.3;
+    z-index: 0;
     right: -40%;
     height: 90%;
     width: 90%;
     top: -80%;
-    z-index: 0;
   }
 }

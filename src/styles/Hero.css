@@ -78,36 +78,25 @@
   display: none;
 }
 
-/* 1800px и выше: sportments1800.png — растягивается с разрешением */
-@media (min-width: 1800px) {
-  .hero {
-    width: 100vw;
-    margin-left: calc((1760px - 100vw) / 2);
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-  }
-
-  .hero-bg-wide {
-    display: block;
-    width: 100%;
-    min-width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: bottom right;
-  }
-
-  .hero-content {
-    width: 1760px;
-    display: flex;
-  }
+.hero {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
-/* 768px–1799px: sportments1440-768.png */
-@media (min-width: 768px) and (max-width: 1799px) {
-  .hero-bg-desktop {
-    display: block;
-  }
+.hero-bg-wide {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom right;
+}
+
+.hero-content {
+  width: 1760px;
+  display: flex;
 }
 
 /* до 767px: UiBlockOne.png (mobile) */
