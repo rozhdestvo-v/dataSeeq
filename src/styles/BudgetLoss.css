@@ -1,0 +1,445 @@
+.budget-loss {
+  width: 100%;
+  height: 100vh;
+  padding: 6rem 2rem;
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+  background: var(--background-first);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Desktop styles - use bgPanel.png background */
+@media (min-width: 426px) {
+  .budget-loss-background {
+    background-image: url("../assets/bgPanel.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    overflow: visible;
+  }
+}
+
+.budget-loss-container {
+  max-width: 1760px;
+  position: relative;
+  z-index: 1;
+}
+
+.budget-loss-title {
+  font-family:
+    "VK Sans Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 96px;
+  margin-top: 96px;
+}
+
+.budget-loss-panels {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.budget-panel {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  border-radius: 8px;
+  padding: 32px 36px;
+  background: rgba(30, 30, 40, 0.9);
+  background: radial-gradient(circle, #1e2731, #141a28);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+  transition: none;
+  overflow: visible;
+  min-height: 200px;
+  box-shadow: 0 4px 104.3px 0 #3b1c8c33;
+}
+
+.budget-panel-headline {
+  font-size: 128px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  transition: none;
+}
+
+.budget-panel-subtitle {
+  font-size: 32px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.budget-panel-text {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 48px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.budget-loss-cta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.budget-loss-button {
+  width: 286px;
+  min-width: 120px;
+  height: 64px;
+  padding: 16px 24px;
+  gap: 8px;
+  border-radius: 56px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: radial-gradient(
+    ellipse 38.33% 172.37% at 29.58% 14.06%,
+    #417dfc 0%,
+    #4945f7 49.26%,
+    #5b51ed 95.89%
+  );
+  color: #ffffff;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.budget-loss-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s ease,
+    height 0.6s ease;
+}
+
+.budget-loss-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(65, 125, 252, 0.5);
+  background: radial-gradient(
+    ellipse 38.33% 172.37% at 29.58% 14.06%,
+    #5188fc 0%,
+    #5951f7 49.26%,
+    #6b61ed 95.89%
+  );
+}
+
+.budget-loss-button:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.budget-loss-button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.budget-loss-button:focus {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 3px;
+}
+
+.budget-loss-cta-text {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #999999;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .budget-loss-panels {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .budget-loss {
+    padding: 4rem 1.5rem;
+  }
+
+  .budget-loss-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 544px) {
+  .budget-loss-background {
+    display: none;
+  }
+
+  .budget-loss {
+    height: auto;
+    padding: 0px 20px;
+  }
+
+  .budget-loss-container {
+    justify-content: center;
+  }
+
+  .budget-loss-title {
+    margin: 40px 0px;
+  }
+  .budget-panel {
+    height: auto;
+  }
+
+  .budget-loss-panels {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .budget-panel-headline {
+    font-size: 48px;
+  }
+
+  .budget-panel-subtitle {
+    font-size: 20px;
+  }
+
+  .budget-panel-text {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .budget-loss-cta,
+  .budget-loss-button,
+  .budget-loss-cta-text {
+    width: 100%;
+  }
+
+  .budget-loss-cta-text {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+
+  
+  /* .budget-loss {
+    padding: 3rem 1.5rem;
+    overflow-x: visible;
+    background-image: none !important;
+    background: var(--background-first);
+  }
+
+  .budget-loss-container {
+    max-width: 100%;
+    padding: 0;
+    overflow-x: visible;
+  }
+
+  .budget-loss-title {
+    font-family:
+      "VK Sans Display",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .budget-loss-panels {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 0;
+    margin-bottom: 2rem;
+    scroll-snap-type: none;
+  }
+
+  .budget-loss-panels::after {
+    display: none;
+  }
+
+  .budget-loss-panels::-webkit-scrollbar {
+    display: none;
+  }
+
+  .budget-panel {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+    scroll-snap-align: none;
+    box-sizing: border-box;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    background-image: none !important;
+    background: rgba(30, 30, 40, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .budget-panel:hover {
+    transform: none;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .budget-panel:hover::before {
+    opacity: 0;
+  }
+
+  .budget-panel:hover .budget-panel-headline {
+    transform: none;
+    text-shadow: none;
+  }
+
+  .budget-panel-headline {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  .budget-panel-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .budget-panel-text {
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+  }
+
+  .budget-loss-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .budget-loss-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .budget-loss-cta-text {
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #999999;
+  } */
+}

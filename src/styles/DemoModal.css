@@ -1,0 +1,358 @@
+.demo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #030a11;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.demo-modal-bg {
+  background: #030a11;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+
+.demo-modal-panel {
+  overflow: hidden;
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+  width: 100%;
+  max-width: 1760px;
+  min-height: 692px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  align-items: flex-start;
+  margin: auto;
+  padding: 90px 0px 120px 32px;
+  /* background: rgba(15, 18, 28, 0.98); */
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  /* border-radius: 24px; */
+  /* padding: 4rem; */
+  /* box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5); */
+}
+
+.demo-modal-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.demo-modal-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.demo-modal-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 10000;
+}
+
+.demo-modal-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.demo-modal-close span {
+  display: block;
+  margin-top: -0.15em;
+}
+
+.demo-modal-left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  z-index: 1;
+}
+
+.demo-modal-feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  z-index: 1;
+}
+
+.demo-modal-pill {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Inter", sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  background: transparent;
+}
+
+.demo-modal-headline {
+  font-family:
+    "VK Sans Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff;
+  margin: 0;
+}
+
+.demo-modal-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 48px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.demo-modal-form-wrapper {
+  margin-top: 0;
+  z-index: 1;
+}
+
+/* Инпуты — стандартный HeroUI с полной рамкой */
+.demo-modal-input-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  background: rgba(40, 42, 50, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  min-height: 48px !important;
+  /* padding: 0 1.25rem !important; */
+  box-shadow: none !important;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+.demo-modal-input-wrapper:hover {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.demo-modal-input-wrapper[data-focus="true"],
+.demo-modal-form-wrapper
+  [data-slot="base"][data-focus="true"]
+  .demo-modal-input-wrapper {
+  border-color: rgba(139, 92, 246, 0.6) !important;
+  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.3) !important;
+}
+
+.demo-modal-form-wrapper input {
+  text-align: left !important;
+  background: transparent !important;
+}
+
+.demo-modal-form-wrapper input::placeholder,
+.demo-modal-form-wrapper [data-slot="input"]::placeholder {
+  color: #999999 !important;
+}
+
+.demo-modal-form-wrapper [data-slot="inputWrapper"],
+.demo-modal-form-wrapper [data-slot="base"] [data-slot="inputWrapper"] {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.demo-modal-form-wrapper .contact-form-form [data-slot="innerWrapper"],
+.demo-modal-form-wrapper [data-slot="innerWrapper"],
+.demo-modal-form-wrapper .demo-modal-input-wrapper [data-slot="innerWrapper"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  min-height: 100% !important;
+  flex: 1 !important;
+  background: transparent !important;
+}
+
+.demo-modal-form-wrapper .contact-form-form input,
+.demo-modal-form-wrapper input {
+  min-height: 100% !important;
+  padding: 0 1rem !important;
+  padding-left: 1.25rem !important;
+  line-height: inherit !important;
+}
+
+.demo-modal-form-wrapper [data-slot="input"],
+.demo-modal-form-wrapper [data-slot="base"] [data-slot="input"] {
+  background: transparent !important;
+}
+
+/* Кнопка в модалке — компактнее */
+.demo-modal-form-wrapper .form-submit-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Инпуты — полная рамка по всем сторонам (fallback) */
+.demo-modal-form-wrapper [data-slot="inputWrapper"],
+.demo-modal-form-wrapper [data-slot="base"] [data-slot="inputWrapper"] {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.demo-modal-form-wrapper [data-slot="inputWrapper"]:hover,
+.demo-modal-form-wrapper [data-slot="base"]:hover [data-slot="inputWrapper"] {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.demo-modal-form-wrapper [data-slot="inputWrapper"][data-focus="true"],
+.demo-modal-form-wrapper
+  [data-slot="base"][data-focus="true"]
+  [data-slot="inputWrapper"] {
+  border: 1px solid rgba(139, 92, 246, 0.6) !important;
+  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.3) !important;
+}
+
+.demo-modal-form-wrapper input:-webkit-autofill,
+.demo-modal-form-wrapper input:-webkit-autofill:hover,
+.demo-modal-form-wrapper input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 60px rgba(40, 42, 50, 0.9) inset !important;
+  box-shadow: 0 0 0 60px rgba(40, 42, 50, 0.9) inset !important;
+}
+
+@media (max-width: 968px) {
+  .demo-modal-panel {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .demo-modal-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .demo-modal-headline {
+    font-size: 48px;
+  }
+
+  .demo-modal-description {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+
+.form-button-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .demo-modal-overlay {
+    padding: 0.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
+    align-items: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .demo-modal-panel {
+    padding: 1.25rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .demo-modal-form-wrapper {
+    order: -1;
+  }
+
+  .demo-modal-close {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .demo-modal-headline {
+    font-size: 32px;
+  }
+
+  .demo-modal-pill {
+    font-size: 0.8125rem;
+    padding: 0.4rem 0.875rem;
+  }
+
+  .demo-modal-description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .demo-modal-form-wrapper .form-checkbox-text {
+    font-size: 0.8rem;
+  }
+
+  .demo-modal-form-wrapper .form-submit-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .demo-modal-form-wrapper .form-accuracy-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 544px) {
+  .demo-modal-overlay {
+    padding: 0;
+  }
+
+  .demo-modal-header {
+    justify-content: end;
+  }
+
+  .demo-modal-feature-pills {
+    display: none;
+  }
+
+  .demo-modal-panel {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .demo-modal-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .demo-modal-form-wrapper {
+    padding: 48px 0;
+  }
+}

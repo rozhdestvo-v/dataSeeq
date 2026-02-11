@@ -1,0 +1,168 @@
+.solutions {
+  width: 100%;
+  padding: 96px 2rem;
+  position: relative;
+}
+
+.solutions-container {
+  max-width: 1760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.solutions-title {
+  font-family:
+    "VK Sans Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 1.15;
+  letter-spacing: 0%;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+.solutions-title-highlight {
+  background: linear-gradient(90deg, #417dfc 0%, #4945f7 50%, #5b51ed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.solutions-grid {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.solution-card {
+  width: calc(50% - 24px);
+  position: relative;
+  transition: none;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    86.88% 86.88% at 50% 50%,
+    rgba(255, 255, 255, 0.1) 38.94%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0px 4px 104.3px 0px var(--Purple200);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.solution-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  flex: 1;
+}
+
+.solution-card-title {
+  font-family:
+    "VK Sans Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0;
+}
+
+.solution-card-description {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 48px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .solutions-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 968px) {
+  .solutions-title {
+    font-size: 40px;
+  }
+
+  .solution-card {
+    width: 100%;
+    height: auto;
+    padding: 32px 40px;
+  }
+
+  .solution-card-inner {
+    gap: 48px;
+  }
+}
+
+/* Mobile responsive for 320-425px */
+@media (max-width: 544px) {
+  .solutions {
+    padding: 3rem 0px 3rem 0px;
+    overflow-x: visible;
+    overflow: auto;
+  }
+
+  .solutions-title {
+    padding-left: 20px;
+  }
+
+  .solutions-grid {
+    flex-direction: row;
+    overflow: auto;
+    padding: 40px 20px;
+    flex-wrap: nowrap;
+  }
+
+  .solution-card {
+    display: flex;
+    width: auto;
+    max-width: 70%;
+    flex-shrink: 0;
+    padding: 16px;
+    height: auto;
+  }
+
+  .solution-card-inner {
+    row-gap: 24px;
+    flex: 0;
+  }
+
+  .solution-card-title {
+    font-size: 24px;
+  }
+
+  .solution-card-description {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,39 @@
+export const BurgerIcon = () => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="6"
+        y="7"
+        width="20"
+        height="2"
+        rx="1"
+        fill="white"
+        fill-opacity="0.9"
+      />
+      <rect
+        x="6"
+        y="15"
+        width="20"
+        height="2"
+        rx="1"
+        fill="white"
+        fill-opacity="0.9"
+      />
+      <rect
+        x="6"
+        y="23"
+        width="20"
+        height="2"
+        rx="1"
+        fill="white"
+        fill-opacity="0.9"
+      />
+    </svg>
+  );
+};

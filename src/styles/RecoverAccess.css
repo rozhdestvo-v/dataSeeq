@@ -1,0 +1,125 @@
+.recover-access-container {
+  max-width: 420px;
+}
+
+.recover-access-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.recover-access-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.recover-access-back:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.recover-access-back-icon {
+  font-size: 1.25rem;
+}
+
+.recover-access-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'VK Sans Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.recover-access-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0 0 2rem;
+  line-height: 1.5;
+}
+
+.recover-access-email-icon {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.recover-access-form {
+  gap: 1.25rem;
+}
+
+.recover-access-submit {
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 24px;
+  background: linear-gradient(90deg, #417DFC 0%, #4945F7 50%, #5B51ED 100%) !important;
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recover-access-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(65, 125, 252, 0.4);
+}
+
+.recover-access-cancel {
+  padding: 0.85rem 1.5rem;
+  border-radius: 24px;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.recover-access-cancel:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.recover-access-help {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0.5rem 0 0;
+}
+
+.recover-access-footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  text-align: center;
+}
+
+.recover-access-footer .login-footer {
+  position: static;
+  margin-bottom: 0.5rem;
+}
+
+.recover-access-copyright {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}

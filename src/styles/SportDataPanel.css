@@ -1,0 +1,222 @@
+/* Плашка с данными — glassmorphism */
+.sport-data-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 600px;
+  min-width: 600px;
+  max-width: 380px;
+  min-height: 100%;
+  padding: 48px;
+  gap: 16px;
+  background: rgba(15, 18, 28, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 0 20px 20px 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.data-panel-section {
+  /* background: rgba(15, 18, 28, 0.75); */
+  font-family: "Inter";
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.data-panel-section:last-child {
+  margin-bottom: 0;
+}
+
+.data-panel-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+/* Спонсорский охват — горизонтальные бары */
+.reach-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reach-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.reach-label {
+  flex: 0 0 70px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Inter", sans-serif;
+}
+
+.reach-bar-track {
+  flex: 1;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reach-bar {
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #9a5fd9, #2b9ef7);
+}
+
+.reach-value {
+  flex: 0 0 45px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Inter", sans-serif;
+  text-align: right;
+}
+
+/* Время бренда в кадре — донат */
+.donut-section {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.donut-chart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.donut-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55%;
+  height: 55%;
+  background: rgba(15, 18, 28);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Inter", sans-serif;
+}
+
+/* Сравнение по стоимости — вертикальные бары */
+.cost-bars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  height: 120px;
+  padding-top: 0.5rem;
+}
+
+.cost-bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cost-bar-track {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* background: rgba(255, 255, 255, 0.06); */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cost-bar {
+  width: 30%;
+  min-height: 4px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cost-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+/* Mobile — плашка под изображением, не перекрывает */
+@media (max-width: 768px) {
+  .sport-data-panel {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    border-radius: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: -1px;
+    box-sizing: border-box;
+  }
+
+  .reach-label,
+  .legend-label,
+  .cost-label {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+  }
+
+  .data-panel-title {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}

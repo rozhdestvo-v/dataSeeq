@@ -1,0 +1,418 @@
+.header {
+  width: 100%;
+  position: sticky;
+  top: 32px;
+  z-index: 100;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-panel {
+  width: 100%;
+  max-width: 1760px;
+  height: 48px;
+  min-height: 48px;
+  background: rgba(55, 56, 62, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 40px;
+  padding: 0 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-button:hover .burger-icon {
+  opacity: 0.7;
+}
+
+.mobile-menu-button:active .burger-icon {
+  opacity: 0.5;
+}
+
+/* Mobile Menu Dropdown */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: rgba(5, 8, 21, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 99;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  z-index: 98;
+}
+
+.mobile-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 80px;
+  padding: 80px 1.5rem 2rem 1.5rem;
+}
+
+.mobile-nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.mobile-nav-link:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link:hover {
+  color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.06);
+  padding-left: 1.5rem;
+}
+
+.mobile-nav-link:active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile Phone Button */
+.mobile-phone-button {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  padding-right: 20px;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.phone-icon {
+  width: 32px;
+  height: 32px;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-phone-button:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.mobile-phone-button:active {
+  transform: scale(0.95);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-image {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.nav-link:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Header Right Section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.header-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 1rem;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.0625rem;
+}
+
+.phone-number {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.phone-description {
+  color: #999999;
+  font-size: 0.65rem;
+  font-weight: 400;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  white-space: nowrap;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* CTA Button */
+.cta-button {
+  padding: 0.35rem 0.85rem;
+  border: none;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #2563eb 0%, #4f46e5 50%, #6366f1 100%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s ease,
+    height 0.6s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+  background: linear-gradient(90deg, #3b82f6 0%, #6366f1 50%, #818cf8 100%);
+}
+
+.cta-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.header-cta-buttons .cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.header-cta-buttons .cta-button:active {
+  transform: translateY(0);
+}
+
+.cta-button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 10px rgba(139, 92, 246, 0.4);
+}
+
+.header-cta-buttons .cta-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.cta-button:focus {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+}
+
+.cta-button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.header-cta-buttons {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.header-cta-buttons .cta-button:first-child {
+  border-radius: 32px 12px 12px 32px;
+}
+
+/* Кнопка "Войти" — импортированные изображения */
+.header-login-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 0;
+  position: relative;
+}
+
+.header-login-img {
+  display: block;
+  height: auto;
+  max-height: 40px;
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.header-login-img-normal {
+  opacity: 1;
+}
+
+.header-login-img-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header-login-button:hover .header-login-img-normal {
+  opacity: 0;
+}
+
+.header-login-button:hover .header-login-img-hover {
+  opacity: 1;
+}
+
+@media (max-width: 544px) {
+  .header {
+    position: sticky;
+    top: 12px;
+    padding: 0px 20px;
+  }
+
+  .header-panel {
+    height: 62px;
+    border-radius: 16px;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+    z-index: 10;
+  }
+
+  .mobile-phone-button {
+    display: block;
+    order: 3;
+    position: relative;
+    z-index: 10;
+  }
+
+  .navigation,
+  .header-right {
+    display: none !important;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}

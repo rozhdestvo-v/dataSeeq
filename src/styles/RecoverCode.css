@@ -1,0 +1,85 @@
+.recover-code-container {
+  max-width: 420px;
+}
+
+.recover-code-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.recover-code-email {
+  font-size: 1rem;
+  color: #417DFC;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0 0 2rem;
+}
+
+.recover-code-form {
+  margin-bottom: 1.5rem;
+}
+
+.recover-code-otp-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recover-code-otp-segment {
+  width: 44px;
+  height: 52px;
+  min-width: 44px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  background: rgba(120, 120, 130, 0.3);
+  border: 1px solid rgba(120, 120, 130, 0.2);
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-family: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.recover-code-otp-segment:hover {
+  border-color: rgba(120, 120, 130, 0.4);
+}
+
+.recover-code-otp-segment:focus {
+  outline: none;
+  border-color: rgba(65, 125, 252, 0.6);
+  background: rgba(120, 120, 130, 0.4);
+}
+
+.recover-code-otp-segment::placeholder {
+  color: transparent;
+}
+
+.recover-code-help {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.recover-code-help a {
+  color: #417DFC;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.recover-code-help a:hover {
+  color: #5B8FF7;
+}
+
+.recover-code-copyright-right {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+}

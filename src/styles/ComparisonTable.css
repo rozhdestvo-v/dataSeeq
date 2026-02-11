@@ -1,0 +1,216 @@
+.comparison-table {
+  width: 100%;
+  padding: 6rem 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison-table-container {
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.comparison-title {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  color: #ffffff;
+  font-family:
+    "VK Sans Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  text-align: left;
+  margin-bottom: 3rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 3rem;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table-content {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.table-header-metric {
+  padding: 1.25rem 2rem;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.table-header {
+  padding: 1.25rem 2rem;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dataseeq-header {
+  background: transparent;
+}
+
+.table-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-metric {
+  padding: 1.25rem 2rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  background: transparent;
+}
+
+.table-cell {
+  padding: 1.25rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+}
+
+.dataseeq-cell {
+  background: transparent;
+  font-weight: 500;
+}
+
+.checkmark,
+.cross {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #999999;
+  color: #999999;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.cross {
+  border-color: #666666;
+  color: #666666;
+}
+
+.comparison-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.comparison-button {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #8b5cf6 0%, #3b82f6 100%);
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 600; /* Inter Semi Bold */
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.comparison-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.comparison-cta-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  margin: 0;
+}
+
+@media (max-width: 544px) {
+  .comparison-table {
+    display: none;
+  }
+
+  .comparison-title {
+    font-size: 2.5rem;
+  }
+
+  .table-header-metric,
+  .table-header,
+  .table-metric,
+  .table-cell {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}

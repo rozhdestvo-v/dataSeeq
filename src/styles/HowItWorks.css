@@ -1,0 +1,298 @@
+.how-it-works {
+  width: 100%;
+  height: 100vh;
+  padding: 160px 32px 80px;
+}
+
+/* .how-it-works::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 480px;
+  height: 300px;
+  background: radial-gradient(
+    ellipse 90% 55% at 45% 52%,
+    rgba(0, 217, 255, 0.14) 0%,
+    rgba(0, 217, 255, 0.04) 48%,
+    transparent 82%
+  );
+  border-radius: 50%;
+  filter: blur(58px);
+  z-index: 0;
+} */
+
+.how-it-works::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  width: 540px;
+  height: 340px;
+  background: radial-gradient(
+    ellipse 85% 50% at 55% 48%,
+    #0b3c45,
+    rgba(0, 217, 255, 0.03) 50%,
+    transparent 85%
+  );
+  border-radius: 50%;
+  filter: blur(64px);
+  z-index: 1;
+}
+
+.how-it-works-container {
+  max-width: 1760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.how-it-works-circle-1 {
+  position: absolute;
+  bottom: -1200px;
+  left: 0;
+}
+
+.how-it-works-circle-2 {
+  position: absolute;
+  bottom: -1400px;
+  right: 0;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(15px, -15px);
+    opacity: 0.8;
+  }
+}
+
+.how-it-works-title {
+  font-size: 64px;
+  font-weight: 600; /* VK Sans Display DemiBold */
+  font-style: normal;
+  color: #ffffff;
+  font-family:
+    "VK Sans Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.how-it-works-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400; /* Inter Regular */
+  font-style: normal;
+  color: #cccccc;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  text-align: left;
+  margin-bottom: 4rem;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.step-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.step-card {
+  display: none;
+}
+
+.step-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.step-button {
+  display: none;
+}
+
+.step-label {
+  background: rgba(120, 120, 130, 0.3);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(120, 120, 130, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(120, 120, 130, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.step-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.2);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.4s ease,
+    height 0.4s ease;
+}
+
+/* Active state driven by scroll only — ховер не нужен */
+.step-label.active {
+  background: url("../assets/StepPanel.png") center / cover no-repeat;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+  border: 1px solid rgba(99, 102, 241, 0.55);
+  transform: scale(1.03);
+}
+
+.step-panel {
+  background: #212529;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  flex: 1;
+  position: relative;
+}
+
+.step-description {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .how-it-works-title {
+    font-size: 2.5rem;
+  }
+
+  .how-it-works-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .step-label {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 544px) {
+  .how-it-works {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 20px;
+    height: auto;
+    position: relative;
+  }
+
+  .how-it-works-bg {
+    background-image: url("../assets/Pattern.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    margin-top: 450px;
+  }
+
+  .how-it-works-container {
+    width: 100%;
+  }
+
+  .how-it-works-subtitle {
+    white-space: wrap;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .how-it-works::before,
+  .how-it-works::after,
+  .how-it-works-circle-1,
+  .how-it-works-circle-2,
+  .how-it-works-circle-3 {
+    display: none;
+  }
+
+  .step-wrapper {
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 10px 2px;
+  }
+
+  .step-panel {
+    display: flex;
+    background: rgba(55, 56, 62, 0.45);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .steps-list {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0px;
+  }
+
+  .step-label {
+    background: url("../assets/StepPanel.png") center / cover no-repeat;
+    border: 1px solid rgba(99, 102, 241, 0.55);
+    transform: scale(1.03);
+    padding: 10px 30px;
+    border-radius: 40px;
+  }
+
+  .step-label.active {
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 40px;
+  }
+}

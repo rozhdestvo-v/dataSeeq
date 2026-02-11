@@ -1,0 +1,313 @@
+.examples {
+  width: 100%;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.examples-images-preload {
+  position: absolute;
+  top: -1000vh;
+}
+
+.examples-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: url("../assets/HowWorkBg.png");
+}
+
+.examples-container {
+  max-width: 1760px;
+  position: relative;
+  z-index: 1;
+}
+
+.examples-title {
+  font-size: 3.5rem;
+  font-weight: 600; /* VK Sans Display DemiBold */
+  font-style: normal;
+  color: #ffffff;
+  font-family:
+    "VK Sans Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  text-align: left;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.examples-description {
+  font-size: 1.25rem;
+  font-weight: 400; /* Inter Regular */
+  font-style: normal;
+  color: #cccccc;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  text-align: left;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+/* HeroUI Tabs — стиль по макету */
+.sport-tabs-wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.sport-tabs-base {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.sport-tabs-list {
+  background: rgba(25, 35, 55, 0.75) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(120, 120, 130, 0.15) !important;
+  border-radius: 10px !important;
+  padding: 4px !important;
+  gap: 4px !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 120px 120px 120px 160px !important;
+  overflow: visible !important;
+}
+
+/* Desktop: табы поверх изображения */
+@media (min-width: 769px) {
+  .sport-tabs-base {
+    position: relative !important;
+  }
+
+  .sport-tabs-list {
+    position: absolute !important;
+    top: 1.5rem !important;
+    left: 1.5rem !important;
+    z-index: 10 !important;
+    max-width: 100% !important;
+  }
+}
+
+.sport-tabs-tab {
+  min-height: 32px !important;
+  height: 32px !important;
+  padding: 0 0.75rem !important;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  letter-spacing: 0 !important;
+  border-radius: 8px !important;
+  transition: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-align: center !important;
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.sport-tabs-tab-content {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.sport-tabs-tab:not([data-selected="true"]) {
+  background: transparent !important;
+  color: rgba(160, 175, 210, 0.95) !important;
+}
+
+.sport-tabs-tab[data-selected="true"] {
+  background: linear-gradient(
+    90deg,
+    #417dfc 0%,
+    #4945f7 50%,
+    #5b51ed 100%
+  ) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(73, 69, 247, 0.35) !important;
+}
+
+.sport-tabs-tab[data-selected="true"] .sport-tabs-tab-content {
+  color: #ffffff !important;
+}
+
+.sport-tabs-tab[data-hover="true"]:not([data-selected="true"]) {
+  background: rgba(120, 120, 130, 0.15) !important;
+  color: rgba(200, 210, 230, 0.98) !important;
+}
+
+.sport-tabs-cursor {
+  border-radius: 8px !important;
+  background: linear-gradient(
+    90deg,
+    #417dfc 0%,
+    #4945f7 50%,
+    #5b51ed 100%
+  ) !important;
+  transition: none !important;
+}
+
+.sport-tabs-panel {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.sport-image-inner {
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  min-height: 380px;
+}
+
+.sport-image-inner .sport-image {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
+}
+
+/* Mobile: tabs below description, above image (layout as in design) — only on mobile */
+@media (max-width: 768px) {
+  .examples {
+    padding: 3rem 1.5rem;
+    background: var(--background-first);
+  }
+
+  .examples-title {
+    font-size: 1.75rem;
+    font-weight: 600; /* VK Sans Display DemiBold */
+    font-style: normal;
+    font-family:
+      "VK Sans Display",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .examples-description {
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif;
+    font-weight: 400; /* Inter Regular */
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #999999;
+  }
+
+  /* Mobile: табы выше изображения, все 4 в ряд, вмещаются в экран */
+  .sport-tabs-list {
+    position: static !important;
+    margin-bottom: 1.5rem;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    overflow: visible !important;
+    background: rgba(25, 35, 55, 0.75) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(120, 120, 130, 0.15) !important;
+    border-radius: 10px !important;
+    padding: 4px !important;
+    gap: 4px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+  }
+
+  .sport-tabs-tab {
+    min-height: 32px !important;
+    height: 100% !important;
+    padding: 8px 4px !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    min-width: 0 !important;
+  }
+
+  .sport-tabs-tab-content {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+
+  .sport-tabs-tab[data-selected="true"] {
+    background: linear-gradient(
+      90deg,
+      #417dfc 0%,
+      #4945f7 50%,
+      #5b51ed 100%
+    ) !important;
+    box-shadow: 0 2px 12px rgba(73, 69, 247, 0.35);
+  }
+
+  .sport-tabs-tab:not([data-selected="true"]) {
+    color: rgba(160, 175, 210, 0.95) !important;
+  }
+
+  .sport-image-inner {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    width: calc(100% + 3rem);
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+    
+    .sport-image-inner .sport-image .sport-data-panel {
+    border-radius: 16px;
+    object-position: center center;
+  }
+}
