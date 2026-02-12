@@ -33,6 +33,7 @@
   position: absolute;
   bottom: -1200px;
   left: 0;
+  z-index: 1;
 }
 
 .how-it-works-circle-2 {

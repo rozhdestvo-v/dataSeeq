@@ -201,9 +201,9 @@
 }
 
 /* Mobile: tabs below description, above image (layout as in design) — only on mobile */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .examples {
-    padding: 3rem 20px;
+    padding: 3rem 0px;
     background: var(--background-first);
   }
 
@@ -300,9 +300,7 @@
   }
 
   .sport-image-inner {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    width: calc(100% + 3rem);
+    width: 100%;
     box-shadow:
       0 12px 40px rgba(0, 0, 0, 0.5),
       0 0 0 1px rgba(255, 255, 255, 0.06);
@@ -311,5 +309,12 @@
   .sport-image-inner .sport-image .sport-data-panel {
     border-radius: 16px;
     object-position: center center;
+  }
+}
+
+@media (max-width: 544px) {
+  .examples {
+    padding: 3rem 20px;
+    background: var(--background-first);
   }
 }
