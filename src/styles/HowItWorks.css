@@ -1,26 +1,8 @@
 .how-it-works {
   width: 100%;
-  height: 100vh;
-  padding: 20px 32px 80px;
+  /* min-height: 100vh; */
+  padding: 20px 0px 80px;
 }
-
-/* .how-it-works::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 480px;
-  height: 300px;
-  background: radial-gradient(
-    ellipse 90% 55% at 45% 52%,
-    rgba(0, 217, 255, 0.14) 0%,
-    rgba(0, 217, 255, 0.04) 48%,
-    transparent 82%
-  );
-  border-radius: 50%;
-  filter: blur(58px);
-  z-index: 0;
-} */
 
 .how-it-works::after {
   content: "";
@@ -73,8 +55,8 @@
 }
 
 .how-it-works-title {
-  font-size: 64px;
-  font-weight: 600; /* VK Sans Display DemiBold */
+  font-size: 4rem;
+  font-weight: 600;
   font-style: normal;
   color: #ffffff;
   font-family:
@@ -85,13 +67,14 @@
     "Roboto",
     sans-serif;
   text-align: left;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
 }
 
 .how-it-works-subtitle {
   font-size: 1.25rem;
-  font-weight: 400; /* Inter Regular */
+  font-weight: 400;
   font-style: normal;
   color: #cccccc;
   font-family:
@@ -224,7 +207,7 @@
   .how-it-works {
     width: 100%;
     overflow: hidden;
-    padding-bottom: 20px;
+    padding: 20px;
     height: auto;
     position: relative;
   }

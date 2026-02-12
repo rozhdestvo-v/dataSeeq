@@ -1,6 +1,6 @@
 .advantages {
   width: 100%;
-  padding: 6rem 8px;
+  padding: 6rem 0px;
   overflow: hidden;
   /* background: url('../assets/swapPhone.png') center / cover no-repeat; */
 }
@@ -20,7 +20,7 @@
 .advantages-container {
   max-width: 1760px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
@@ -84,7 +84,7 @@
 .advantage-icon {
   width: 500px;
   height: 500px;
-  margin: 50px;
+  /* margin: 50px; */
   object-fit: contain;
   filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.5));
   transition: all 0.4s ease;
@@ -143,7 +143,7 @@
 }
 
 .advantage-number {
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
   font-family:
@@ -158,7 +158,7 @@
 }
 
 .advantage-text {
-  font-size: 48px;
+  font-size: 32px;
   color: rgba(255, 255, 255, 0.7);
   font-family:
     "VK Sans Display",
@@ -199,7 +199,7 @@
 }
 
 .advantage-description {
-  font-size: 26px;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.8);
   font-family:
     "Inter",
@@ -349,7 +349,7 @@
 
 @media (max-width: 544px) {
   .advantages {
-    padding: 0px;
+    padding: 0px 20px;
     position: relative;
   }
 

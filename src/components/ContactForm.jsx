@@ -27,9 +27,10 @@ function ContactForm() {
   };
 
   return (
-    <div>
+    <div className="demo-modal-padding">
       <div className="demo-modal-bg" />
-      <div className="demo-modal-panel">
+      <div style={{ left: "0" }} className="demo-modal-bg" />
+      <div style={{ padding: "96px 0" }} className="demo-modal-panel">
         <div className="demo-modal-header">
           <div className="demo-modal-feature-pills">
             <span className="demo-modal-pill">

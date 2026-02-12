@@ -1,6 +1,6 @@
 .business-results {
   width: 100%;
-  padding: 6rem 8px;
+  padding: 6rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -8,7 +8,7 @@
 .business-results-container {
   max-width: 1760px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
@@ -288,6 +288,11 @@
 @media (max-width: 544px) {
   .business-results-title {
     font-size: 2.5rem;
+  }
+
+  .business-results {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .accordion-header {

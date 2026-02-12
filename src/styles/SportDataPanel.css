@@ -24,6 +24,9 @@
 
 .data-panel-section {
   /* background: rgba(15, 18, 28, 0.75); */
+  /* display: flex; */
+  flex-direction: column;
+  width: 100%;
   font-family: "Inter";
   flex: 1;
   backdrop-filter: blur(20px);
@@ -33,10 +36,29 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   align-items: center;
   justify-content: center;
+  text-align: left;
 }
 
 .data-panel-section:last-child {
   margin-bottom: 0;
+}
+
+.data-panel-section-bottom {
+  display: flex;
+  height: 100%;
+  gap: 16px;
+}
+
+@media (min-width: 1350px) {
+  .data-panel-section-bottom {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 544px) {
+  .data-panel-section-bottom {
+    flex-direction: column;
+  }
 }
 
 .data-panel-title {
@@ -57,6 +79,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  width: 100%;
 }
 
 .reach-bar-row {
@@ -100,6 +123,8 @@
 /* Время бренда в кадре — донат */
 .donut-section {
   display: flex;
+  width: 100%;
+  justify-content: center;
   align-items: center;
   gap: 1.25rem;
 }
@@ -178,7 +203,7 @@
 }
 
 .cost-bar {
-  width: 30%;
+  width: 50%;
   min-height: 4px;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);

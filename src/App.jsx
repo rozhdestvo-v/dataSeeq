@@ -55,17 +55,19 @@ function App() {
   return (
     <div className="app">
       <div className="app-inner">
-      <Header onOpenDemo={() => setIsDemoOpen(true)} />
-        <Hero onOpenDemo={() => setIsDemoOpen(true)} />
-        <HowItWorks />
-        <Examples />
-        <BudgetLoss />
-        <Razdel />
-        <Solutions />
-        <Advantages onOpenDemo={() => setIsDemoOpen(true)} />
-        <BusinessResults onOpenDemo={() => setIsDemoOpen(true)} />
-        <ComparisonTable onOpenDemo={() => setIsDemoOpen(true)} />
-        <ContactForm />
+        <div className="app-margin">
+          <Header onOpenDemo={() => setIsDemoOpen(true)} />
+          <Hero onOpenDemo={() => setIsDemoOpen(true)} />
+          <HowItWorks />
+          <Examples />
+          <BudgetLoss />
+          <Razdel />
+          <Solutions />
+          <Advantages onOpenDemo={() => setIsDemoOpen(true)} />
+          <BusinessResults onOpenDemo={() => setIsDemoOpen(true)} />
+          <ComparisonTable onOpenDemo={() => setIsDemoOpen(true)} />
+          <ContactForm />
+        </div>
       </div>
       <Footer />
       <DemoModal isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />

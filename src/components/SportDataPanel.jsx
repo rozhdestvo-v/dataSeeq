@@ -138,61 +138,63 @@ function SportDataPanel({ sport = "football" }) {
       </motion.section>
 
       {/* Время бренда в кадре */}
-      <motion.section
-        className="data-panel-section"
-        initial={false}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h3 className="data-panel-title">Время бренда в кадре</h3>
-        <div className="donut-section">
-          <motion.div
-            className="donut-chart"
-            style={{
-              background: buildDonutGradient(donutData, brands),
-            }}
-            initial={false}
-            animate={{ scale: 1, opacity: 1 }}
-          >
-            <div className="donut-hole" />
-          </motion.div>
-          <div className="donut-legend">
-            {donutData.map((item) => (
-              <div key={item.brand} className="legend-item">
-                <span
-                  className="legend-dot"
-                  style={{ backgroundColor: brands[item.brand].color }}
-                />
-                <span className="legend-label">{item.brand}</span>
+      <div className="data-panel-section-bottom">
+        <motion.section
+          className="data-panel-section"
+          initial={false}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <h3 className="data-panel-title">Время бренда в кадре</h3>
+          <div className="donut-section">
+            <motion.div
+              className="donut-chart"
+              style={{
+                background: buildDonutGradient(donutData, brands),
+              }}
+              initial={false}
+              animate={{ scale: 1, opacity: 1 }}
+            >
+              <div className="donut-hole" />
+            </motion.div>
+            <div className="donut-legend">
+              {donutData.map((item) => (
+                <div key={item.brand} className="legend-item">
+                  <span
+                    className="legend-dot"
+                    style={{ backgroundColor: brands[item.brand].color }}
+                  />
+                  <span className="legend-label">{item.brand}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+  
+        {/* Сравнение по стоимости */}
+        <motion.section
+          className="data-panel-section"
+          initial={false}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <h3 className="data-panel-title">Сравнение по стоимости</h3>
+          <div className="cost-bars">
+            {costData.map((item, i) => (
+              <div key={item.brand} className="cost-bar-col">
+                <div className="cost-bar-track">
+                  <motion.div
+                    className="cost-bar"
+                    style={{ backgroundColor: brands[item.brand].color }}
+                    initial={false}
+                    animate={{ height: `${item.height}%` }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </div>
+                <span className="cost-label">{item.brand}</span>
               </div>
             ))}
           </div>
-        </div>
-      </motion.section>
-
-      {/* Сравнение по стоимости */}
-      <motion.section
-        className="data-panel-section"
-        initial={false}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h3 className="data-panel-title">Сравнение по стоимости</h3>
-        <div className="cost-bars">
-          {costData.map((item, i) => (
-            <div key={item.brand} className="cost-bar-col">
-              <div className="cost-bar-track">
-                <motion.div
-                  className="cost-bar"
-                  style={{ backgroundColor: brands[item.brand].color }}
-                  initial={false}
-                  animate={{ height: `${item.height}%` }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <span className="cost-label">{item.brand}</span>
-            </div>
-          ))}
-        </div>
-      </motion.section>
+        </motion.section>
+      </div>
     </motion.div>
   );
 }

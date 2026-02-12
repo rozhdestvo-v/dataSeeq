@@ -3,7 +3,7 @@
   position: sticky;
   top: 32px;
   z-index: 100;
-  padding: 0 2rem;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,6 +184,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  padding: 0px 2rem;
   flex: 1;
   justify-content: center;
 }
@@ -381,6 +382,29 @@
 
 .header-login-button:hover .header-login-img-hover {
   opacity: 1;
+}
+
+@media (max-width: 1350px) {
+  .mobile-menu-button {
+    display: flex;
+    z-index: 10;
+  }
+
+  .navigation,
+  .header-right {
+    display: none !important;
+  }
+
+  .mobile-phone-button {
+    display: block;
+    order: 3;
+    position: relative;
+    z-index: 10;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
 }
 
 @media (max-width: 544px) {
