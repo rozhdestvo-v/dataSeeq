@@ -229,6 +229,7 @@
   text-align: left;
   color: #999999;
   margin: 0;
+  max-width: 260px;
 }
 
 @media (max-width: 1500px) {
@@ -313,7 +314,7 @@
   .budget-loss-cta-text {
     text-align: center;
     display: inline-block;
-    width: 100%;
+    max-width: 100%;
   }
 
   /* .budget-loss {

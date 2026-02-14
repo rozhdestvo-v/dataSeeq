@@ -74,7 +74,10 @@
 }
 
 /* до 767px: UiBlockOne.png (mobile) */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  .hero-background {
+    width: 100vw;
+  }
   .hero-bg-desktop {
     display: none;
   }
