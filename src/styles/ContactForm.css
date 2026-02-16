@@ -325,7 +325,7 @@
   }
 }
 
-@media (max-width: 544px) {
+@media (max-width: 1200px) {
   .contact-form-title {
     font-size: 26px;
   }

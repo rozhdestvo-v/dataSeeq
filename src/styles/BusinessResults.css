@@ -285,7 +285,7 @@
 }
 
 /* Responsive */
-@media (max-width: 544px) {
+@media (max-width: 1200px) {
   .business-results-title {
     font-size: 2.5rem;
   }

@@ -407,7 +407,7 @@
   }
 }
 
-@media (max-width: 544px) {
+@media (max-width: 1200px) {
   .header {
     position: sticky;
     top: 12px;

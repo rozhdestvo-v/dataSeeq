@@ -350,6 +350,12 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .advantages {
+    padding: 0px 20px;
+  }
+}
+
 @media (max-width: 544px) {
   .advantages {
     padding: 0px 20px;

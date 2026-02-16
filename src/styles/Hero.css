@@ -37,6 +37,7 @@
   top: 0;
   left: -25%;
   z-index: 0;
+  overflow: hidden;
 }
 
 .hero-bg-image {
@@ -69,15 +70,15 @@
 }
 
 .hero-content {
-  width: 1760px;
+  width: 100%;
   display: flex;
 }
 
 /* до 767px: UiBlockOne.png (mobile) */
-@media (max-width: 991px) {
-  .hero-background {
+@media (max-width: 1200px) {
+  /* .hero-background {
     width: 100vw;
-  }
+  } */
   .hero-bg-desktop {
     display: none;
   }
@@ -106,7 +107,6 @@
 .hero-text {
   display: flex;
   flex-direction: column;
-  max-width: 900px;
   margin-left: 0;
 }
 
@@ -246,7 +246,7 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-@media (max-width: 544px) {
+@media (max-width: 1200px) {
   .hero {
     min-height: 100vh;
     padding-top: 0;

@@ -123,6 +123,12 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .solutions {
+    padding: 80px 20px;
+  }
+}
+
 /* Mobile responsive for 320-425px */
 @media (max-width: 544px) {
   .solutions {

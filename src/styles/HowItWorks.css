@@ -8,7 +8,7 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 80%;
+  right: 0;
   width: 540px;
   height: 340px;
   background: radial-gradient(
@@ -88,7 +88,6 @@
   text-align: left;
   margin-bottom: 4rem;
   line-height: 1.6;
-  white-space: nowrap;
 }
 
 .steps-list {
@@ -190,17 +189,13 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .how-it-works-title {
-    font-size: 2.5rem;
-  }
-
-  .how-it-works-subtitle {
-    font-size: 1.125rem;
-  }
-
-  .step-label {
-    align-self: flex-start;
+@media (max-width: 1200px) {
+  .how-it-works {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    height: auto;
+    position: relative;
   }
 }
 

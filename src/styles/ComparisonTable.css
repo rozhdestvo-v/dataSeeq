@@ -197,7 +197,7 @@
   margin: 0;
 }
 
-@media (max-width: 544px) {
+@media (max-width: 1200px) {
   .comparison-table {
     display: none;
   }

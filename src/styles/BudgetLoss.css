@@ -1,6 +1,6 @@
 .budget-loss {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 0;
   /* overflow-x: hidden; */
   /* overflow-y: hidden; */
@@ -265,7 +265,7 @@
   }
 }
 
-@media (max-width: 544px) {
+@media (max-width: 1200px) {
   .budget-loss-background {
     display: none;
   }
