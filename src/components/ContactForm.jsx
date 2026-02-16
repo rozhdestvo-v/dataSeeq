@@ -55,7 +55,7 @@ function ContactForm() {
             <form className="contact-form-form" onSubmit={handleSubmit}>
               <div
                 className="flex w-full flex-col gap-4"
-                style={{ marginBottom: "18px" }}
+                style={{ marginBottom: "10px" }}
               >
                 <Input
                   type="text"
@@ -71,7 +71,7 @@ function ContactForm() {
                     innerWrapper: "!justify-start",
                   }}
                 />
-                <div style={{ marginBottom: "18px" }}>
+                <div style={{ marginBottom: "10px" }}>
                   <Input
                     type="text"
                     placeholder="Компания"
@@ -168,139 +168,6 @@ function ContactForm() {
         </div>
       </div>
     </div>
-  );
-
-  return (
-    <section id="questions" className="contact-form">
-      <div className="contact-form-container">
-        <div className="contact-form-left">
-          <div className="feature-pills">
-            <div className="feature-pill">AI-технологии мирового уровня</div>
-            <div className="feature-pill">Данные за 5 минут</div>
-            <div className="feature-pill">Нет аналогов в России</div>
-          </div>
-
-          <h2 className="contact-form-title">
-            Проверьте бренд и опередите
-            <br />
-            рынок
-          </h2>
-
-          <p className="contact-form-description">
-            Контролируйте каждый рубль, управляйте эффективностью рекламы с
-            ювелирной точностью на основе реальных данных
-          </p>
-        </div>
-
-        <div className="contact-form-right">
-          <form className="contact-form-form" onSubmit={handleSubmit}>
-            <div className="flex w-full flex-col gap-4">
-              <Input
-                type="text"
-                placeholder="ФИО"
-                value={formData.name}
-                onValueChange={(v) => handleChange("name", v)}
-                size="sm"
-                classNames={{
-                  input:
-                    "text-white placeholder:text-gray-400 text-lg py-4 !text-left",
-                  inputWrapper: "demo-modal-input-wrapper",
-                  innerWrapper: "!justify-start",
-                }}
-              />
-              <Input
-                type="text"
-                placeholder="Компания"
-                value={formData.company}
-                onValueChange={(v) => handleChange("company", v)}
-                variant="bordered"
-                size="lg"
-                classNames={{
-                  input:
-                    "text-white placeholder:text-gray-400 text-lg py-4 !text-left ",
-                  inputWrapper: "demo-modal-input-wrapper",
-                  innerWrapper: "!justify-start",
-                }}
-              />
-              <Input
-                type="tel"
-                placeholder="Телефон"
-                value={formData.phone}
-                onValueChange={(v) => handleChange("phone", v)}
-                variant="bordered"
-                size="lg"
-                classNames={{
-                  input:
-                    "text-white placeholder:text-gray-400 text-lg py-4 !text-left",
-                  inputWrapper: "demo-modal-input-wrapper",
-                  innerWrapper: "!justify-start",
-                }}
-              />
-              <Input
-                type="email"
-                placeholder="E-mail"
-                value={formData.email}
-                onValueChange={(v) => handleChange("email", v)}
-                variant="bordered"
-                size="lg"
-                classNames={{
-                  input:
-                    "text-white placeholder:text-gray-400 text-lg py-4 !text-left",
-                  inputWrapper: "demo-modal-input-wrapper",
-                  innerWrapper: "!justify-start",
-                }}
-              />
-            </div>
-            <div className="form-checkboxes">
-              <label className="form-checkbox-label">
-                <Checkbox
-                  checked={consent1}
-                  onChange={(e) => setConsent1(e.target.checked)}
-                  className="form-checkbox-input"
-                  required
-                  color="secondary"
-                >
-                  <span className="form-checkbox-text">
-                    Я предоставляю свое согласие на обработку персональных
-                    данных
-                  </span>
-                </Checkbox>
-              </label>
-              <label className="form-checkbox-label">
-                <Checkbox
-                  checked={consent2}
-                  onChange={(e) => setConsent2(e.target.checked)}
-                  className="form-checkbox-input"
-                  color="secondary"
-                >
-                  <span className="form-checkbox-text">
-                    Я согласен на получение рекламы
-                  </span>
-                </Checkbox>
-              </label>
-            </div>
-            <div className="hero-button-wrapper">
-              <button
-                className="hero-button"
-                type="submit"
-                onClick={() => onOpenDemo && onOpenDemo()}
-              >
-                Бесплатный аудит
-              </button>
-              <p className="hero-accuracy">
-                <span className="hero-accuracy-main">
-                  Точность данных — 99,8%
-                </span>
-                <br />
-                <span className="hero-accuracy-sub">
-                  на основе работы 6 нейросетей
-                </span>
-              </p>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
   );
 }
 

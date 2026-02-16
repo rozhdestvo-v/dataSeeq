@@ -1,8 +1,9 @@
 .advantages {
   width: 100%;
   padding: 6rem 0px;
-  overflow: hidden;
+  overflow: visible;
   /* background: url('../assets/swapPhone.png') center / cover no-repeat; */
+  position: relative;
 }
 
 .advantages-bg {
@@ -11,10 +12,11 @@
   background-size: contain;
   position: absolute;
   width: 100vw;
-  height: 100%;
-  top: 670vh;
+  height: 150%;
   left: 0;
   overflow: visible;
+  /* z-index: 1; */
+  /* top: 50%; */
 }
 
 .advantages-container {
@@ -32,7 +34,8 @@
 .advantages-circle {
   position: absolute;
   right: 0;
-  bottom: -630vh;
+  /* top: 0; */
+  /* bottom: -630vh; */
 }
 
 .advantages-title {
@@ -314,7 +317,7 @@
 }
 
 /* Responsive */
-@media (max-width: 968px) {
+@media (max-width: 991px) {
   .advantages-content {
     flex-direction: column;
     align-items: center;

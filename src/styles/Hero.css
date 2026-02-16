@@ -155,7 +155,7 @@
 .hero-button-wrapper {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 16px;
   /* flex-wrap: wrap; */
 }
 

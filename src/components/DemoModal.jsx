@@ -105,7 +105,7 @@ function DemoModal({ isOpen, onClose, noCloseIcon }) {
               <form className="contact-form-form" onSubmit={handleSubmit}>
                 <div
                   className="flex w-full flex-col gap-4"
-                  style={{ marginBottom: "18px" }}
+                  style={{ marginBottom: "10px" }}
                 >
                   <Input
                     type="text"
@@ -120,7 +120,7 @@ function DemoModal({ isOpen, onClose, noCloseIcon }) {
                       innerWrapper: "!justify-start",
                     }}
                   />
-                  <div style={{ marginBottom: "18px" }}>
+                  <div style={{ marginBottom: "10px" }}>
                     <Input
                       type="text"
                       placeholder="Компания"
