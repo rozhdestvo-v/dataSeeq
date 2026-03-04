@@ -184,6 +184,76 @@
   }
 }
 
+@keyframes borderSlideBlue {
+  0% {
+    transform: scaleY(1.4);
+    background-color: rgba(53, 184, 255, 1);
+  }
+  50% {
+    transform: scaleY(1);
+    background-color: rgba(53, 184, 255, 1);
+  }
+  100% {
+    transform: scaleY(1);
+    background-color: unset;
+  }
+}
+
+.figure-skating-yellow {
+  position: absolute;
+  top: 25%;
+  left: 41.8%;
+  height: 11.5%;
+  width: 6.5%;
+  border: 3px solid rgba(255, 251, 33, 1);
+  border-radius: 8px;
+  animation: borderSlideYellow 1s ease;
+}
+
+.figure-skating-blue {
+  position: absolute;
+  top: 51.8%;
+  left: 4.4%;
+  height: 9.3%;
+  width: 17.8%;
+  border: 3px solid rgba(53, 184, 255, 1);
+  border-radius: 8px;
+  animation: borderSlideBlue 1s ease;
+}
+
+.basketball-green {
+  position: absolute;
+  top: 56.6%;
+  left: 13.6%;
+  height: 4%;
+  width: 1.8%;
+  border: 3px solid rgba(33, 255, 51, 1);
+  border-radius: 8px;
+  animation: borderSlideGreen 1s ease;
+}
+
+.basketball-yellow {
+  position: absolute;
+  top: 49%;
+  left: 60.2%;
+  height: 6.5%;
+  width: 3%;
+  border: 3px solid rgba(255, 251, 33, 1);
+  border-radius: 8px;
+  animation: borderSlideYellow 1s ease;
+}
+
+.basketball-blue {
+  position: absolute;
+  top: 46.3%;
+  left: 51%;
+  height: 4.3%;
+  width: 4.5%;
+  border: 3px solid rgba(53, 184, 255, 1);
+  border-radius: 8px;
+  animation: borderSlideBlue 1s ease;
+}
+
 .football-yellow {
   position: absolute;
   top: 66.2%;
@@ -384,7 +454,16 @@
 @media (max-width: 920px) {
   .football-pink,
   .football-green,
-  .football-yellow {
+  .football-yellow,
+  .hockey-pink,
+  .hockey-green,
+  .hockey-yellow-one,
+  .hockey-yellow-two,
+  .basketball-blue,
+  .basketball-green,
+  .basketball-yellow,
+  .figure-skating-blue,
+  .figure-skating-yellow {
     display: none;
   }
 }

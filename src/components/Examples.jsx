@@ -96,6 +96,19 @@ function Examples() {
                           <div className="hockey-yellow-two" />
                         </>
                       )}
+                      {sport.id === "basketball" && (
+                        <>
+                          <div className="basketball-blue" />
+                          <div className="basketball-green" />
+                          <div className="basketball-yellow" />
+                        </>
+                      )}
+                      {sport.id === "figure-skating" && (
+                        <>
+                          <div className="figure-skating-blue" />
+                          <div className="figure-skating-yellow" />
+                        </>
+                      )}
                       <SportDataPanel sport={sport.id} />
                     </>
                   )}
