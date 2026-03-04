@@ -157,12 +157,18 @@
 }
 
 .comparison-button {
-  padding: 0.625rem 1.25rem;
+  padding: 16px 24px;
   border: none;
-  border-radius: 40px;
-  background: linear-gradient(90deg, #8b5cf6 0%, #3b82f6 100%);
-  color: #ffffff;
-  font-size: 0.9375rem;
+  height: 64px;
+  border-radius: 56px;
+  background: radial-gradient(
+    circle at 25% 25%,
+    rgba(65, 125, 252, 1) 0%,
+    rgba(73, 69, 247, 1) 50%,
+    rgba(91, 81, 237, 1) 100%
+  );
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 20px;
   font-weight: 600; /* Inter Semi Bold */
   font-family:
     "Inter",

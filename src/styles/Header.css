@@ -12,12 +12,12 @@
 .header-panel {
   width: 100%;
   max-width: 1760px;
-  height: 48px;
+  height: 80px;
   min-height: 48px;
   background: rgba(55, 56, 62, 0.45);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-radius: 40px;
+  border-radius: 24px;
   padding: 0 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
@@ -25,6 +25,21 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+}
+
+.header-login-button {
+  position: relative;
+  border: 1px solid #ffffff80;
+  border-radius: 18px;
+  height: 32px;
+  min-width: 120px;
+  transition: opacity 0.3s ease;
+}
+
+.header-login-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .header-container {
@@ -263,8 +278,13 @@
 .cta-button {
   padding: 0.35rem 0.85rem;
   border: none;
-  border-radius: 32px;
-  background: linear-gradient(90deg, #2563eb 0%, #4f46e5 50%, #6366f1 100%);
+  border-radius: 56px;
+  background: radial-gradient(
+    circle at 25% 25%,
+    rgba(65, 125, 252, 1) 0%,
+    rgba(73, 69, 247, 1) 50%,
+    rgba(91, 81, 237, 1) 100%
+  );
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 500;
@@ -341,9 +361,9 @@
   flex-shrink: 0;
 }
 
-.header-cta-buttons .cta-button:first-child {
+/* .header-cta-buttons .cta-button:first-child {
   border-radius: 32px 12px 12px 32px;
-}
+} */
 
 /* Кнопка "Войти" — импортированные изображения */
 .header-login-button {

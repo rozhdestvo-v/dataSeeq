@@ -181,19 +181,10 @@ function Header({ onOpenDemo }) {
               >
                 Запросить демо
               </button>
-              <a href="#login" className="header-login-button">
-                <img
-                  src={loginButtonNormal}
-                  alt="Войти"
-                  className="header-login-img header-login-img-normal"
-                />
-                <img
-                  src={loginButtonHover}
-                  alt=""
-                  className="header-login-img header-login-img-hover"
-                  aria-hidden
-                />
-              </a>
+
+              <button className="header-login-button">
+                <a href="#login">Войти</a>
+              </button>
             </div>
           </div>
 

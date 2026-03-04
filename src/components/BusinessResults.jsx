@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import plusIcon from "../assets/Plus.png";
+import plusIconHover from "../assets/plusIconHover.png";
 import minusIcon from "../assets/minus.png";
+import minusIconHover from "../assets/minusIconHover.png";
 import "../styles/BusinessResults.css";
 import { BusinessCircle } from "../assets/BusinessCircle";
+import { MinusIcon } from "../assets/plus_minus_icons/minusIcon";
+import { PlusIcon } from "../assets/plus_minus_icons/plusIcon";
 
 function BusinessResults({ onOpenDemo }) {
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -138,6 +142,19 @@ function BusinessResults({ onOpenDemo }) {
     setActiveIndex(activeIndex === index ? -1 : index);
   };
 
+  const getImage = (index) => {
+    const current = document.getElementById(index);
+    const image = document.getElementById(`icon-${index}`);
+
+    current.addEventListener("mouseenter", () => {
+      if (activeIndex === index) {
+        image.src = minusIconHover;
+      } else {
+        image.src = plusIconHover;
+      }
+    });
+  };
+
   return (
     <section id="analyses" className="business-results">
       <div className="business-circle">
@@ -150,8 +167,10 @@ function BusinessResults({ onOpenDemo }) {
           {results.map((result, index) => (
             <div
               key={index}
+              id={index}
               className={`accordion-item ${activeIndex === index ? "active" : ""}`}
             >
+              {/* {getImage(index)} */}
               <div
                 className="accordion-header"
                 onClick={() => toggleItem(index)}
@@ -160,6 +179,7 @@ function BusinessResults({ onOpenDemo }) {
                 <img
                   src={activeIndex === index ? minusIcon : plusIcon}
                   alt={activeIndex === index ? "Minus" : "Plus"}
+                  id={`icon-${index}`}
                   className={`accordion-icon ${activeIndex === index ? "accordion-icon-minus" : ""}`}
                   loading="eager"
                 />

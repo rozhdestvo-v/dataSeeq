@@ -5,9 +5,9 @@ import "../styles/SportDataPanel.css";
 const SPORT_DATA = {
   football: {
     brands: {
-      ROCEAID: { color: "#CA28C4", label: "ROCEAID" },
-      CRICROO: { color: "#A621FF", label: "CRICROO" },
-      NIBUFC: { color: "#35B8FF", label: "NIBUFC" },
+      ROCEAID: { color: "rgba(255, 251, 33, 1)", label: "ROCEAID" },
+      CRICROO: { color: "rgba(33, 255, 51, 1)", label: "CRICROO" },
+      NIBUFC: { color: "rgba(255, 33, 177, 1)", label: "NIBUFC" },
     },
     reachData: [
       { brand: "ROCEAID", value: 856000, percent: 100 },
@@ -27,9 +27,9 @@ const SPORT_DATA = {
   },
   hockey: {
     brands: {
-      CINEGAL: { color: "#CA28C4", label: "CINEGAL" },
-      SPIKES: { color: "#35B8FF", label: "SPIKES" },
-      CANIGHAAS: { color: "#A621FF", label: "CANIGHAAS" },
+      CINEGAL: { color: "rgba(199, 202, 40, 1)", label: "CINEGAL" },
+      SPIKES: { color: "rgba(252, 53, 255, 1)", label: "SPIKES" },
+      CANIGHAAS: { color: "rgba(49, 217, 34, 1)", label: "CANIGHAAS" },
     },
     reachData: [
       { brand: "CINEGAL", value: 508000, percent: 56 },
@@ -49,9 +49,9 @@ const SPORT_DATA = {
   },
   basketball: {
     brands: {
-      CLIVELAND: { color: "#CA28C4", label: "CLIVELAND" },
-      NIKE: { color: "#3B82F6", label: "NIKE" },
-      ADIDAS: { color: "#A621FF", label: "ADIDAS" },
+      CLIVELAND: { color: "rgba(199, 202, 40, 1)", label: "CLIVELAND" },
+      NIKE: { color: "rgba(53, 184, 255, 1)", label: "NIKE" },
+      ADIDAS: { color: "rgba(49, 217, 34, 1)", label: "ADIDAS" },
     },
     reachData: [
       { brand: "CLIVELAND", value: 508000, percent: 100 },
@@ -71,8 +71,8 @@ const SPORT_DATA = {
   },
   "figure-skating": {
     brands: {
-      PACO: { color: "#CA28C4", label: "PACO" },
-      OTECH: { color: "#3B82F6", label: "OTECH" },
+      PACO: { color: "rgba(199, 202, 40, 1)", label: "PACO" },
+      OTECH: { color: "rgba(53, 184, 255, 1)", label: "OTECH" },
     },
     reachData: [
       { brand: "PACO", value: 508000, percent: 100 },
@@ -104,12 +104,7 @@ function SportDataPanel({ sport = "football" }) {
   const data = SPORT_DATA[sport] || SPORT_DATA.football;
   const { brands, reachData, donutData, costData } = data;
   return (
-    <motion.div
-      className="sport-data-panel"
-      initial={false}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.2 }}
-    >
+    <div className="sport-data-panel">
       {/* Спонсорский охват */}
       <motion.section
         className="data-panel-section"
@@ -126,7 +121,8 @@ function SportDataPanel({ sport = "football" }) {
                   className="reach-bar"
                   initial={false}
                   animate={{ width: `${item.percent}%` }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5 }}
+                  style={{ backgroundColor: brands[item.brand].color }}
                 />
               </div>
               <span className="reach-value">
@@ -151,8 +147,6 @@ function SportDataPanel({ sport = "football" }) {
               style={{
                 background: buildDonutGradient(donutData, brands),
               }}
-              initial={false}
-              animate={{ scale: 1, opacity: 1 }}
             >
               <div className="donut-hole" />
             </motion.div>
@@ -169,7 +163,7 @@ function SportDataPanel({ sport = "football" }) {
             </div>
           </div>
         </motion.section>
-  
+
         {/* Сравнение по стоимости */}
         <motion.section
           className="data-panel-section"
@@ -195,7 +189,7 @@ function SportDataPanel({ sport = "football" }) {
           </div>
         </motion.section>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

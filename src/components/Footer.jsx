@@ -5,14 +5,15 @@ import { TgIcon } from "../assets/TgIcon";
 import { VkIcon } from "../assets/VkIcon";
 import { HabrIcon } from "../assets/HabrIcon";
 import { Divider } from "@heroui/react";
+import { MainIconText } from "../assets/mainIconText";
+import { VcIcon } from "../assets/VcIcon";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src={mainIcon} alt="DataSeeq" className="footer-logo-icon" />
-          <span className="footer-logo-text">dataseeq</span>
+          <MainIconText />
         </div>
 
         <nav className="footer-navigation">
@@ -61,7 +62,6 @@ function Footer() {
             Написать нам
           </a>
         </nav>
-        <div className="footer-divider"/>
         <div className="footer-bottom">
           <p className="footer-copyright">Все права защищены 2025 ©</p>
           <div className="footer-social">
@@ -91,6 +91,15 @@ function Footer() {
               aria-label="Telegram"
             >
               <TgIcon />
+            </a>
+            <a
+              href="https://vc.ru/dataseeq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Telegram"
+            >
+              <VcIcon />
             </a>
           </div>
         </div>

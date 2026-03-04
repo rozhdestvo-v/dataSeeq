@@ -136,20 +136,20 @@
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  color: #ffffff !important;
 }
 
 .sport-tabs-tab:not([data-selected="true"]) {
   background: transparent !important;
-  color: rgba(160, 175, 210, 0.95) !important;
 }
 
 .sport-tabs-tab[data-selected="true"] {
-  background: linear-gradient(
-    90deg,
-    #417dfc 0%,
-    #4945f7 50%,
-    #5b51ed 100%
-  ) !important;
+  background: radial-gradient(
+    circle at 25% 25%,
+    rgba(65, 125, 252, 1) 0%,
+    rgba(73, 69, 247, 1) 50%,
+    rgba(91, 81, 237, 1) 100%
+  );
   color: #ffffff !important;
   box-shadow: 0 2px 12px rgba(73, 69, 247, 0.35) !important;
 }
@@ -159,18 +159,11 @@
 }
 
 .sport-tabs-tab[data-hover="true"]:not([data-selected="true"]) {
-  background: rgba(120, 120, 130, 0.15) !important;
-  color: rgba(200, 210, 230, 0.98) !important;
+  color: #ffffff !important;
 }
 
 .sport-tabs-cursor {
   border-radius: 8px !important;
-  background: linear-gradient(
-    90deg,
-    #417dfc 0%,
-    #4945f7 50%,
-    #5b51ed 100%
-  ) !important;
   transition: none !important;
 }
 
@@ -283,20 +276,7 @@
     white-space: normal !important;
     overflow: visible !important;
     text-overflow: clip !important;
-  }
-
-  .sport-tabs-tab[data-selected="true"] {
-    background: linear-gradient(
-      90deg,
-      #417dfc 0%,
-      #4945f7 50%,
-      #5b51ed 100%
-    ) !important;
-    box-shadow: 0 2px 12px rgba(73, 69, 247, 0.35);
-  }
-
-  .sport-tabs-tab:not([data-selected="true"]) {
-    color: rgba(160, 175, 210, 0.95) !important;
+    color: #ffffff !important;
   }
 
   .sport-image-inner {

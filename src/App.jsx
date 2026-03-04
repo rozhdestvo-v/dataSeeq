@@ -32,6 +32,20 @@ function App() {
   });
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
+  function openModal() {
+    // document.body.style.position = "fixed";
+    // document.body.style.top = `-${window.scrollY}px`;
+    setIsDemoOpen(true);
+  }
+
+  function closeModal() {
+    // const scrollY = document.body.style.top;
+    // document.body.style.position = "";
+    // document.body.style.top = "";
+    // window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    setIsDemoOpen(false);
+  }
+
   useEffect(() => {
     const handler = () => {
       const h = window.location.hash;
@@ -56,21 +70,21 @@ function App() {
     <div className="app">
       <div className="app-inner">
         <div className="app-margin">
-          <Header onOpenDemo={() => setIsDemoOpen(true)} />
-          <Hero onOpenDemo={() => setIsDemoOpen(true)} />
+          <Header onOpenDemo={openModal} />
+          <Hero onOpenDemo={openModal} />
           <HowItWorks />
           <Examples />
           <BudgetLoss />
           <Razdel />
           <Solutions />
-          <Advantages onOpenDemo={() => setIsDemoOpen(true)} />
-          <BusinessResults onOpenDemo={() => setIsDemoOpen(true)} />
-          <ComparisonTable onOpenDemo={() => setIsDemoOpen(true)} />
+          <Advantages onOpenDemo={openModal} />
+          <BusinessResults onOpenDemo={openModal} />
+          <ComparisonTable onOpenDemo={openModal} />
           <ContactForm />
+          <DemoModal isOpen={isDemoOpen} onClose={closeModal} />
         </div>
       </div>
       <Footer />
-      <DemoModal isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />
     </div>
   );
 }

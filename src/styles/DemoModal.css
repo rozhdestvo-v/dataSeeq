@@ -11,6 +11,22 @@
   overflow-y: auto;
 }
 
+.form-checkbox-input [data-slot="checkbox-control"][data-selected="true"] {
+  /* Фон при выборе вместо after:bg-danger */
+  background-color: #3b82f6 !important; /* синий */
+}
+
+/* Отключаем дефолтные псевдоэлементы */
+.form-checkbox-input [data-slot="checkbox-control"]::before,
+.form-checkbox-input [data-slot="checkbox-control"]::after {
+  background-color: transparent !important;
+}
+
+.checkbox-input::before {
+  background-color: rgba(73, 69, 247, 1) !important;
+  fill: rgba(73, 69, 247, 1) !important;
+}
+
 .demo-modal-padding-overlay {
   padding: 0px 20px;
 }
@@ -151,12 +167,14 @@
 .demo-modal-form-wrapper {
   margin-top: 0;
   z-index: 1;
+  min-width: 572px;
 }
 
 /* Инпуты — стандартный HeroUI с полной рамкой */
 .demo-modal-input-wrapper {
   display: flex !important;
   align-items: center !important;
+  max-width: 480px;
   background: rgba(40, 42, 50, 0.9) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 12px !important;
@@ -176,7 +194,7 @@
 .demo-modal-form-wrapper
   [data-slot="base"][data-focus="true"]
   .demo-modal-input-wrapper {
-  border-color: rgba(139, 92, 246, 0.6) !important;
+  border-color: rgba(73, 69, 247, 1) !important;
   box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.3) !important;
 }
 
@@ -243,7 +261,7 @@
 .demo-modal-form-wrapper
   [data-slot="base"][data-focus="true"]
   [data-slot="inputWrapper"] {
-  border: 1px solid rgba(139, 92, 246, 0.6) !important;
+  border: 1px solid rgba(73, 69, 247, 1) !important;
   box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.3) !important;
 }
 
@@ -265,6 +283,9 @@
 }
 
 @media (max-width: 968px) {
+  .demo-modal-form-wrapper {
+    min-width: 0;
+  }
   .demo-modal-panel {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -337,7 +358,7 @@
   }
 
   .demo-modal-form-wrapper .form-checkbox-text {
-    font-size: 0.8rem;
+    font-size: 16px;
   }
 
   .demo-modal-form-wrapper .form-submit-button {

@@ -124,7 +124,6 @@ function ContactForm() {
                     onChange={(e) => setConsent1(e.target.checked)}
                     className="form-checkbox-input"
                     required
-                    color="secondary"
                   >
                     <span className="form-checkbox-text">
                       Я предоставляю свое согласие на обработку персональных
@@ -137,7 +136,6 @@ function ContactForm() {
                     checked={consent2}
                     onChange={(e) => setConsent2(e.target.checked)}
                     className="form-checkbox-input"
-                    color="secondary"
                   >
                     <span className="form-checkbox-text">
                       Я согласен на получение рекламы
@@ -151,13 +149,12 @@ function ContactForm() {
                   type="submit"
                   onClick={() => onOpenDemo && onOpenDemo()}
                 >
-                  Бесплатный аудит
+                  Увидеть все возможности
                 </button>
                 <p className="hero-accuracy">
                   <span className="hero-accuracy-main">
                     Точность данных — 99,8%
                   </span>
-                  <br />
                   <span className="hero-accuracy-sub">
                     на основе работы 6 нейросетей
                   </span>

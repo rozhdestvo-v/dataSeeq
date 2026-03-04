@@ -144,36 +144,12 @@ function Advantages({ onOpenDemo }) {
         </h2>
 
         <div className="advantages-icon-text">
-          <motion.div
-            className="advantages-icon"
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{
-              duration: 0.7,
-              type: "spring",
-              stiffness: 120,
-              damping: 15,
-            }}
-          >
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={activeIndex}
-                src={activeAdvantage.icon}
-                alt={activeAdvantage.title}
-                className="advantage-icon"
-                loading="eager"
-                initial={{ opacity: 0, scale: 0.35 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 280,
-                  damping: 22,
-                }}
-              />
-            </AnimatePresence>
-          </motion.div>
+          <img
+            key={activeIndex}
+            src={activeAdvantage.icon}
+            alt={activeAdvantage.title}
+            className="advantage-icon"
+          />
           <div className="advantages-content">
             <div className="advantages-list">
               {advantages.map((advantage, index) => (

@@ -80,7 +80,9 @@ function Examples() {
                     sport.id === "hockey" ||
                     sport.id === "basketball" ||
                     sport.id === "figure-skating") && (
-                    <SportDataPanel sport={sport.id} />
+                    <>
+                      <SportDataPanel sport={sport.id} />
+                    </>
                   )}
                 </div>
               </Tab>

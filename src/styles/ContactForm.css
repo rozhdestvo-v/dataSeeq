@@ -219,8 +219,12 @@
 .form-checkbox-input {
   gap: 12px;
   cursor: pointer;
-  accent-color: #3d32e5 !important;
+  accent-color: rgba(73, 69, 247, 1) !important;
   flex-shrink: 0;
+}
+
+.form-checkbox-input > span {
+  accent-color: rgba(73, 69, 247, 1) !important;
 }
 
 .form-checkbox-text {

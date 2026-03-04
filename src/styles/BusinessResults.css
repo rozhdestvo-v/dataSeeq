@@ -64,6 +64,10 @@
   box-shadow: none;
 }
 
+.accordion-item:hover > div > h3 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .accordion-item.active {
   border-color: transparent;
   box-shadow: none;
@@ -102,6 +106,10 @@
   font-style: normal;
 }
 
+.accordion-title:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .accordion-icon {
   width: 40px;
   height: 40px;
@@ -114,6 +122,10 @@
   transition: all 0.3s ease;
   object-fit: contain;
   object-position: center;
+}
+
+.accordion-icon:hover {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .accordion-icon-minus {
@@ -149,7 +161,7 @@
 .section-label {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
   font-family:
     "VK Sans Display",
     -apple-system,
@@ -165,7 +177,7 @@
   font-size: 1rem;
   font-weight: 400; /* Inter Regular */
   font-style: normal;
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.6);
   font-family:
     "Inter",
     -apple-system,
@@ -217,12 +229,18 @@
 }
 
 .business-results-button {
-  padding: 0.625rem 1.25rem;
+  padding: 16px 24px;
   border: none;
-  border-radius: 40px;
-  background: linear-gradient(90deg, #8b5cf6 0%, #3b82f6 100%);
-  color: #ffffff;
-  font-size: 0.9375rem;
+  height: 64px;
+  border-radius: 56px;
+  background: radial-gradient(
+    circle at 25% 25%,
+    rgba(65, 125, 252, 1) 0%,
+    rgba(73, 69, 247, 1) 50%,
+    rgba(91, 81, 237, 1) 100%
+  );
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 20px;
   font-weight: 600; /* Inter Semi Bold */
   font-family:
     "Inter",

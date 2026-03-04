@@ -205,7 +205,6 @@ function DemoModal({ isOpen, onClose, noCloseIcon }) {
                     <span className="hero-accuracy-main">
                       Точность данных — 99,8%
                     </span>
-                    <br />
                     <span className="hero-accuracy-sub">
                       на основе работы 6 нейросетей
                     </span>
