@@ -195,6 +195,50 @@
   animation: borderSlideYellow 1s ease;
 }
 
+.hockey-pink {
+  position: absolute;
+  top: 37%;
+  left: 54%;
+  height: 8%;
+  width: 5.4%;
+  border: 3px solid rgba(255, 33, 177, 1);
+  border-radius: 8px;
+  animation: borderSlidePink 1s ease;
+}
+
+.hockey-green {
+  position: absolute;
+  top: 60%;
+  left: 3%;
+  height: 10.5%;
+  width: 8.2%;
+  border: 3px solid rgba(33, 255, 51, 1);
+  border-radius: 8px;
+  animation: borderSlideGreen 1s ease;
+}
+
+.hockey-yellow-one {
+  position: absolute;
+  top: 41%;
+  left: 39%;
+  height: 6.5%;
+  width: 2.5%;
+  border: 3px solid rgba(255, 251, 33, 1);
+  border-radius: 8px;
+  animation: borderSlideYellow 1s ease;
+}
+
+.hockey-yellow-two {
+  position: absolute;
+  top: 24.5%;
+  left: 60%;
+  height: 6.5%;
+  width: 3.1%;
+  border: 3px solid rgba(255, 251, 33, 1);
+  border-radius: 8px;
+  animation: borderSlideYellow 1s ease;
+}
+
 .reach-bar {
   height: 100%;
   border-radius: 10px;
@@ -335,6 +379,14 @@
   color: rgba(255, 255, 255, 0.85);
   font-family: "Inter", sans-serif;
   text-align: center;
+}
+
+@media (max-width: 920px) {
+  .football-pink,
+  .football-green,
+  .football-yellow {
+    display: none;
+  }
 }
 
 /* Mobile — плашка под изображением, не перекрывает */

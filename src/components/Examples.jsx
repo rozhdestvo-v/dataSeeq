@@ -88,6 +88,14 @@ function Examples() {
                           <div className="football-yellow" />
                         </>
                       )}
+                      {sport.id === "hockey" && (
+                        <>
+                          <div className="hockey-pink" />
+                          <div className="hockey-green" />
+                          <div className="hockey-yellow-one" />
+                          <div className="hockey-yellow-two" />
+                        </>
+                      )}
                       <SportDataPanel sport={sport.id} />
                     </>
                   )}
