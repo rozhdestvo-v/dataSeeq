@@ -172,7 +172,6 @@ function DemoModal({ isOpen, onClose, noCloseIcon }) {
                       onChange={(e) => setConsent1(e.target.checked)}
                       className="form-checkbox-input"
                       required
-                      color="secondary"
                     >
                       <span className="form-checkbox-text">
                         Я предоставляю свое согласие на обработку персональных
@@ -185,7 +184,6 @@ function DemoModal({ isOpen, onClose, noCloseIcon }) {
                       checked={consent2}
                       onChange={(e) => setConsent2(e.target.checked)}
                       className="form-checkbox-input"
-                      color="secondary"
                     >
                       <span className="form-checkbox-text">
                         Я согласен на получение рекламы
