@@ -16,24 +16,6 @@ function DemoModal({ isOpen, onClose, noCloseIcon }) {
   const [consent2, setConsent2] = useState(false);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      const timer = setTimeout(() => {
-        const firstInput = document.querySelector(
-          ".demo-modal-form-wrapper input",
-        );
-        if (firstInput && typeof firstInput.focus === "function") {
-          firstInput.focus();
-        }
-      }, 150);
-      return () => {
-        clearTimeout(timer);
-        document.body.style.overflow = "";
-      };
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape") onClose();
     };
@@ -58,7 +40,7 @@ function DemoModal({ isOpen, onClose, noCloseIcon }) {
 
   if (!isOpen) return null;
 
-  return createPortal(
+  return (
     <div
       className="demo-modal-overlay"
       // onClick={handleOverlayClick}
@@ -213,8 +195,7 @@ function DemoModal({ isOpen, onClose, noCloseIcon }) {
           </div>
         </div>
       </div>
-    </div>,
-    document.body,
+    </div>
   );
 }
 
