@@ -363,7 +363,8 @@
   left: 50%;
   width: 55%;
   height: 55%;
-  background: rgba(15, 18, 28);
+  background: rgb(31, 35, 46);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: donutHoleAnimation 1s ease;
