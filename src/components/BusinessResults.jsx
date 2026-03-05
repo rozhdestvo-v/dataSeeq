@@ -176,13 +176,22 @@ function BusinessResults({ onOpenDemo }) {
                 onClick={() => toggleItem(index)}
               >
                 <h3 className="accordion-title">{result.title}</h3>
-                <img
-                  src={activeIndex === index ? minusIcon : plusIcon}
-                  alt={activeIndex === index ? "Minus" : "Plus"}
-                  id={`icon-${index}`}
-                  className={`accordion-icon ${activeIndex === index ? "accordion-icon-minus" : ""}`}
-                  loading="eager"
-                />
+                <div class="icon-container">
+                  <img
+                    src={activeIndex === index ? minusIcon : plusIcon}
+                    alt={activeIndex === index ? "Minus" : "Plus"}
+                    id={`icon-${index}`}
+                    className={`accordion-icon ${activeIndex === index ? "accordion-icon-minus" : ""}`}
+                    loading="eager"
+                  />
+                  <img
+                    src={activeIndex === index ? minusIconHover : plusIconHover}
+                    alt={activeIndex === index ? "Minus" : "Plus"}
+                    id={`icon-${index}`}
+                    className={`accordion-icon ${activeIndex === index ? "accordion-icon-minus" : ""} accordion-icon-hover`}
+                    loading="eager"
+                  />
+                </div>
               </div>
               {activeIndex === index && result.content && (
                 <div className="accordion-content">

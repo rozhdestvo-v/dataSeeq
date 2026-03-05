@@ -87,8 +87,9 @@
   transition: none;
 }
 
-.accordion-header:hover {
+.accordion-header:hover .accordion-icon-hover {
   background-color: transparent;
+  opacity: 1;
 }
 
 .accordion-title {
@@ -110,18 +111,39 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+.icon-container {
+  position: relative; /* Важно для позиционирования */
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.icon-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute; /* Накладываем картинки друг на друга */
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease; /* Плавность анимации */
+}
+
 .accordion-icon {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
-  max-width: 40px;
-  max-height: 40px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
   display: block;
   flex-shrink: 0;
   transition: all 0.3s ease;
   object-fit: contain;
   object-position: center;
+}
+
+.accordion-icon-hover {
+  opacity: 0;
 }
 
 .accordion-icon:hover {
