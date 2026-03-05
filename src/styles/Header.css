@@ -404,7 +404,7 @@
   opacity: 1;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1450px) {
   .mobile-menu-button {
     display: flex;
     z-index: 10;
