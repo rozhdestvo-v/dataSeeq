@@ -85,6 +85,7 @@
 }
 
 .advantage-icon {
+  flex-shrink: 0;
   width: 500px;
   height: 500px;
   /* margin: 50px; */
