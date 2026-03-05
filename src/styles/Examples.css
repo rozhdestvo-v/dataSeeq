@@ -294,7 +294,7 @@
 
 @media (max-width: 1200px) {
   .examples {
-    padding: 3rem 20px;
+    padding: 3rem 24px;
     background: var(--background-first);
   }
 }

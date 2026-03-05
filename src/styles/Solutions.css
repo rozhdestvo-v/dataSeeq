@@ -138,13 +138,13 @@
   }
 
   .solutions-title {
-    padding-left: 20px;
+    padding-left: 24px;
   }
 
   .solutions-grid {
     flex-direction: row;
     overflow: auto;
-    padding: 40px 20px;
+    padding: 40px 24px;
     flex-wrap: nowrap;
   }
 
